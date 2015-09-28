@@ -8,10 +8,10 @@ class CurrentController < ApplicationController
   end
 
   def search
-    id = Summoner.id_by_nick(params[:nick])
+    id = Summoner.id_by_nick params[:nick]
 
-    client = Taric.client(region: :br)
-    info = client.current_game(summoner_id: id)
+    client = Taric.client region: :br
+    info = client.current_game summoner_id: id
 
     render component: 'Game', props: info
   end

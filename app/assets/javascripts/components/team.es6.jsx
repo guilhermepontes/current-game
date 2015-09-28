@@ -12,7 +12,6 @@ class Team extends React.Component {
     this.state     = { champions: '' };
   }
 
-
   componentDidMount(){
     $.get(this.endpoint, function(data) {
       this.setState({
@@ -44,5 +43,4 @@ class Team extends React.Component {
       </div>
     );
   }
-
 }
