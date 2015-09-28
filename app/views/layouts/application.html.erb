@@ -2,13 +2,18 @@
 <html>
 <head>
   <title>CurrentGame</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Varela+Round' %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= react_component('Header') %>
 
-<%= yield %>
+  <main>
+    <%= yield %>
+  </main>
 
+  <%= javascript_include_tag 'application' %>
 </body>
 </html>
